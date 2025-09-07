@@ -1,0 +1,62 @@
+[project]
+name = "practice1"
+description = "A cool introductory practice to learn the basics for deep learning"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.0.1"
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "numpy>=1.21.2",
+    "torch",
+    "scipy>=1.15.3",
+    "torchvision",
+    "opencv-python",
+    "python-dotenv",
+    "pytorch_lightning",
+    "opencv-python",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "scikit-image",
+    "albumentations",
+    "tqdm",
+    "pytest",
+    "ruff",
+    "matplotlib",
+    "ipywidgets",
+    "ipympl",
+    "xgboost",
+    "scikit-fuzzy",
+    "gymnasium",
+    "pygame",
+    "ffmpeg-python",
+    "gymnasium",
+    "ipykernel"
+]
+
+
+########################## Tool Configuration ##########################
+[tool.ruff]
+line-length = 100
+ 
+[tool.ruff.lint]
+select = [
+    "N",    # pep8-naming
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # isort
+    "C",    # flake8-comprehensions
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "PD",   # pandas vet
+    "NPY",  # NumPy-specific rules
+]
+ignore = [
+    "C901",  # Too complex 
+    "PD901", # Avoid using df for DataFrames
+]
+
