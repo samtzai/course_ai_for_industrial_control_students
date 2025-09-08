@@ -10,15 +10,7 @@ from tqdm import tqdm
 from .dataset import NoisyRegressionDataset
 from .model import SimplePerceptron
 
-if __name__ == "__main__":
-    # Create output folder based on file folder
-    output_folder = Path(__file__).parent.parent.parent / "outs" / Path(__file__).parent.name  
-    output_folder.mkdir(exist_ok=True, parents=True)
-
-    
-    # Set the seed for reproducibility
-    torch.manual_seed(42)
-    
+def train_model():
     # Create an instance of the dataset
     dataset = NoisyRegressionDataset(size=10000)
 
@@ -104,3 +96,14 @@ if __name__ == "__main__":
     # Save the plot to the outs/ folder
     plt.savefig(output_folder / "loss_plot.png")
     plt.savefig(output_folder / "loss_plot.png")
+
+if __name__ == "__main__":
+    # Create output folder based on file folder
+    output_folder = Path(__file__).parent.parent.parent / "outs" / Path(__file__).parent.name  
+    output_folder.mkdir(exist_ok=True, parents=True)
+
+    
+    # Set the seed for reproducibility
+    torch.manual_seed(42)
+    
+    
