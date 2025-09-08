@@ -5,18 +5,14 @@ readme = "README.md"
 requires-python = ">=3.10"
 version = "0.0.1"
 
-dependencies = []
-
-[project.optional-dependencies]
-dev = [
+dependencies = [
     "numpy>=1.21.2",
     "torch",
-    "scipy>=1.15.3",
+    "scipy>=1.7.3",
     "torchvision",
     "opencv-python",
     "python-dotenv",
-    "pytorch_lightning",
-    "opencv-python",
+    "pytorch-lightning",
     "pandas",
     "scikit-learn",
     "matplotlib",
@@ -26,7 +22,6 @@ dev = [
     "tqdm",
     "pytest",
     "ruff",
-    "matplotlib",
     "ipywidgets",
     "ipympl",
     "xgboost",
@@ -34,9 +29,9 @@ dev = [
     "gymnasium",
     "pygame",
     "ffmpeg-python",
-    "gymnasium",
     "ipykernel"
 ]
+
 
 
 ########################## Tool Configuration ##########################

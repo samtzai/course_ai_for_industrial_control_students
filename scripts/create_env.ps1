@@ -25,7 +25,7 @@ Write-Host "Updating pip..." -ForegroundColor Green
 python -m pip install --upgrade pip
 
 Write-Host "Installing requirements..." -ForegroundColor Green
-python -m pip install -e .[dev]
+python -m pip install -e .
 
 Write-Host "Environment setup complete!" -ForegroundColor Green
 # python -m pip install box2D
