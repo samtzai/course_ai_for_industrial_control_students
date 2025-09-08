@@ -12,7 +12,7 @@ This course repository contains comprehensive materials organized into two diffe
 - **src**: As python notebooks are not suitable for professional coding. in this section, we include modular python code to help the students learn appropiate python coding.
 
 ### 📚 **Notebooks** (`notebooks/`)
-- **Environment Setup** (`00_environment/`): Python basics and introduction
+- **Environment Setup** (`00_python_basics/`): Python basics and introduction
 - **Introduction to AI** (`01_introduction/`): 
   - Linear model training 
   - Complex function fitting exercises
@@ -43,6 +43,10 @@ This course repository contains comprehensive materials organized into two diffe
 - `general_installation.md`: Platform-specific installation guides
 
 ## Installation:
+Follow this section if you are installing the development tools in your own computer. 
+This process has been already done at the University lab. 
+In that case, go to the "Open the repository in VS Code" section.
+
 If you are installing it on linux. Use the[./Makefile](./Makefile) instead to create the environment.
 
 ### INSTALL APPLICATIONS
