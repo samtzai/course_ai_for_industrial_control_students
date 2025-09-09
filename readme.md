@@ -52,11 +52,11 @@ If you are installing it on linux. Use the[./Makefile](./Makefile) instead to cr
 ### INSTALL APPLICATIONS
 1) Install python3 from the Microsoft Store (python 3.13)
 2) Install VSCode from the Microsoft Store
-3) Install the following software:
+<!-- 3) Install the following software:
     - Git: 
     ```bash
     https://git-scm.com/downloads/win
-    ```
+    ``` -->
 ### CONFIGURE WINDOWS POLICIES
 
 In windows, if large directories are not allowed, change script policy in Powershell with admin rights:
@@ -111,7 +111,8 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
     - select "clone from github". This will help you clone the repository without the need of ssh keys
     - Write the url of the repository: https://github.com/your_group/your_project
     - Select the folder where you want to clone the repository
-2) OPTION2: If downloaded from eGela or with DownloadZip in github:
+2) OPTION2: If downloaded  DownloadZip in github:
+    - Go to code in github and select download zip
     - Unzip the folder
     - Move the unzipped folder to a short folder (e.g. C:\practicas_ia)
     -
