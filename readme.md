@@ -78,18 +78,18 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 2) Install the following extensions on the extensions tab in VS Code    
     - Recommended extensions in VS Code:
         - Jupyter
-        - WSL
-        - Remote Explorer
+        <!-- - WSL -->
+        <!-- - Remote Explorer -->
         - Python
         - Excel Viewer
         - Git Graph
         - Rainbow CSV
-        - Ruff
-        - vscode-pydata-viewer
+        <!-- - Ruff -->
+        <!-- - vscode-pydata-viewer -->
         - Markdown Preview Mermaid Support
-        - Remote SSH
-        - Material Icon Theme
-3) Configure git
+        <!-- - Remote SSH -->
+        <!-- - Material Icon Theme -->
+<!-- 3) Configure git
     - In VSCode, open new terminal (menu, terminal, new)
     - Run the following commands: 
         Configure name and email in git
@@ -101,7 +101,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         ```bash
         git config --global merge.rebase false
         ```
-    - Close the terminal
+    - Close the terminal -->
 
 ## Open the repository in VS Code
 1) Open VS Code
