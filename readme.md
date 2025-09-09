@@ -43,13 +43,9 @@ This course repository contains comprehensive materials organized into two diffe
 - `general_installation.md`: Platform-specific installation guides
 
 ## Installation:
-Follow this section if you are installing the development tools in your own computer. 
-This process has been already done at the University lab. 
-In that case, go to the "Open the repository in VS Code" section.
-
 If you are installing it on linux. Use the[./Makefile](./Makefile) instead to create the environment.
 
-### INSTALL APPLICATIONS
+### INSTALL APPLICATIONS [SKIP in Lab computers]
 1) Install python3 from the Microsoft Store (python 3.13)
 2) Install VSCode from the Microsoft Store
 <!-- 3) Install the following software:
