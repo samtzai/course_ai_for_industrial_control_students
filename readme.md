@@ -122,8 +122,8 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
     - Select the folder where you cloned the repository
 
 ## Create environment
-1) Open your project in VS Code
-2) Open a new Terminal
+1) Open your project in VS Code (file -> open_folder)
+2) Open a new Terminal (view-->terminal)
     - Execute script create_env.ps1
         ```bash
         .\scripts\create_env.ps1
