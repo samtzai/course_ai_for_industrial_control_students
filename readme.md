@@ -105,12 +105,16 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 ## Open the repository in VS Code
 1) Open VS Code
-2) Clone the repository from github
+2a) Clone the repository from github (if not downloaded from eGela)
     - Open the command palette (Ctrl+Shift+P)
     - Write "Git: Clone"
     - select "clone from github". This will help you clone the repository without the need of ssh keys
     - Write the url of the repository: https://github.com/your_group/your_project
     - Select the folder where you want to clone the repository
+2b) If downloaded from eGela or with DownloadZip in github:
+    - Unzip the folder
+    - Move the unzipped folder to a short folder (e.g. C:\practicas_ia)
+    -
 3) Open the repository
     - Open the command palette (Ctrl+Shift+P)
     - Write "Open in Folder"
