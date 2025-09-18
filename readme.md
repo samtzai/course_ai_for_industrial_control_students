@@ -66,13 +66,13 @@ In windows, if large directories are not allowed, change script policy in Powers
 ```bash
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" ` -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
-<!-- 3) Execute the following commnand to allow script execution (**Abrir como administrador**)
+3) Execute the following commnand to allow script execution (**Abrir como administrador**)
 
 Note: In windows, if script running rights are not allowed, change script policy in Powershell with admin rights for your user. 
 
 ```bash
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-``` -->
+```
 ## Configure your development stack:
 1) Open VSCode
 2) Install the following extensions on the extensions tab in VS Code    
