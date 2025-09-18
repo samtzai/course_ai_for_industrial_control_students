@@ -29,7 +29,8 @@ dependencies = [
     "gymnasium",
     "pygame",
     "ffmpeg-python",
-    "ipykernel"
+    "ipykernel",
+    "stringzilla<=4.0.0"
 ]
 
 
