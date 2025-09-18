@@ -43,16 +43,20 @@ This course repository contains comprehensive materials organized into two diffe
 - `general_installation.md`: Platform-specific installation guides
 
 ## Installation:
+Follow this section if you are installing the development tools in your own computer. 
+This process has been already done at the University lab. 
+In that case, go to the "Open the repository in VS Code" section.
+
 If you are installing it on linux. Use the[./Makefile](./Makefile) instead to create the environment.
 
-### INSTALL APPLICATIONS [SKIP in Lab computers]
+### INSTALL APPLICATIONS
 1) Install python3 from the Microsoft Store (python 3.13)
 2) Install VSCode from the Microsoft Store
-<!-- 3) Install the following software:
+3) Install the following software:
     - Git: 
     ```bash
     https://git-scm.com/downloads/win
-    ``` -->
+    ```
 ### CONFIGURE WINDOWS POLICIES
 
 In windows, if large directories are not allowed, change script policy in Powershell with admin rights:
@@ -62,13 +66,13 @@ In windows, if large directories are not allowed, change script policy in Powers
 ```bash
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" ` -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
-3) Execute the following commnand to allow script execution (**Abrir como administrador**)
+<!-- 3) Execute the following commnand to allow script execution (**Abrir como administrador**)
 
-Note: In windows, if script running rights are not allowed, change script policy in Powershell with admin rights. 
+Note: In windows, if script running rights are not allowed, change script policy in Powershell with admin rights for your user. 
 
 ```bash
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-```
+``` -->
 ## Configure your development stack:
 1) Open VSCode
 2) Install the following extensions on the extensions tab in VS Code    
@@ -118,8 +122,8 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
     - Select the folder where you cloned the repository
 
 ## Create environment
-1) Open your project in VS Code (file -> open_folder)
-2) Open a new Terminal (view-->terminal)
+1) Open your project in VS Code
+2) Open a new Terminal
     - Execute script create_env.ps1
         ```bash
         .\scripts\create_env.ps1
@@ -128,7 +132,14 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         ```bash
         .\env\Scripts\activate
         ```
+  
+  In windows, If you have permisions issues to run the command execute bypassing the execution permits:
+      
+    ```bash
+    Powershell -ExecutionPolicy Bypass -File ".\scripts\create_env.ps1"
+    ```
   When VSCODE detect that you are creating a new environment, say yes
+
 ## Run/Debug a Jupyter-Notebook in VSCODE
 0) Open the notebook you want to run and make sure it is on the active tab.
 1) Press Run-All option to run all the notebook 
