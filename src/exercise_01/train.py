@@ -10,7 +10,7 @@ from tqdm import tqdm
 from .dataset import NoisyRegressionDataset
 from .model import SimplePerceptron
 
-def train_model():
+def train_model(output_folder: Path):
     # Create an instance of the dataset
     dataset = NoisyRegressionDataset(size=10000)
 
@@ -102,6 +102,7 @@ if __name__ == "__main__":
     output_folder = Path(__file__).parent.parent.parent / "outs" / Path(__file__).parent.name  
     output_folder.mkdir(exist_ok=True, parents=True)
 
+    train_model(output_folder)
     
     # Set the seed for reproducibility
     torch.manual_seed(42)
