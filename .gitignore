@@ -168,5 +168,3 @@ cython_debug/
 # Custom Files
 # outs/
 # *.mat
-
-*_quiz_SOL*
