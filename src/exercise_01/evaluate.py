@@ -11,7 +11,7 @@ from .dataset import NoisyRegressionDataset
 from .model import SimplePerceptron
 
 
-def evaluate_and_plot(loader, dataset_name, output_folder):
+def evaluate_and_plot(loader,model, dataset_name, output_folder):
     model.eval()
     all_inputs = []
     all_outputs = []
@@ -119,9 +119,9 @@ if __name__ == "__main__":
 
     metrics = {}
     # Evaluate and plot for train, validation and test datasets
-    metrics["train"] = evaluate_and_plot(train_loader, "train", output_folder)
-    metrics["validation"] = evaluate_and_plot(val_loader, "validation", output_folder)
-    metrics["test"] = evaluate_and_plot(test_loader, "test", output_folder)
+    metrics["train"] = evaluate_and_plot(train_loader, model, "train", output_folder)
+    metrics["validation"] = evaluate_and_plot(val_loader, model, "validation", output_folder)
+    metrics["test"] = evaluate_and_plot(test_loader, model, "test", output_folder)
 
     # save  metrics as csv
     pd.DataFrame(metrics).to_csv(output_folder / "metrics.csv")
