@@ -10,7 +10,20 @@ from tqdm import tqdm
 from .dataset import NoisyRegressionDataset
 from .model import SimplePerceptron
 
-def train_model(output_folder: Path):
+def get_device(force: str = "auto") -> torch.device:
+    """Return a torch.device based on the `force` option.
+
+    force: 'auto'|'cpu'|'cuda' - when 'auto' will pick cuda if available.
+    """
+    force = force.lower()
+    if force == "cpu":
+        return torch.device("cpu")
+    if force == "cuda":
+        return torch.device("cuda")
+    # auto
+    return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+def train_model(output_folder: Path, device: torch.device):
     # Create an instance of the dataset
     dataset = NoisyRegressionDataset(size=10000)
 
@@ -23,15 +36,16 @@ def train_model(output_folder: Path):
     )
 
     # Create DataLoaders for the datasets
-    train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=10, shuffle=False)
+    pin_memory = True if device.type == "cuda" else False
+    train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True, pin_memory=pin_memory)
+    val_loader = DataLoader(val_dataset, batch_size=10, shuffle=False, pin_memory=pin_memory)
 
     # Define the model, loss function, and optimizer
     input_dim = 1
     output_dim = 1
-    model = SimplePerceptron(input_dim, output_dim)
+    model = SimplePerceptron(input_dim, output_dim).to(device)
     criterion = nn.MSELoss()
-    optimizer = optim.SGD(model.parameters(), lr=0.0001)
+    optimizer = optim.AdamW(model.parameters(), lr=0.0001)
 
     # Training loop with validation and saving best weights
     num_epochs = 100
@@ -46,8 +60,10 @@ def train_model(output_folder: Path):
         train_loss = 0
         for inputs, targets in train_loader:
             # Forward pass
-            outputs = model(inputs)
-            loss = criterion(outputs, targets)
+            inputs_cuda = inputs.to(device)
+            targets_cuda = targets.to(device)
+            outputs = model(inputs_cuda, use_activation=False)
+            loss = criterion(outputs, targets_cuda)
 
 
 
@@ -66,8 +82,10 @@ def train_model(output_folder: Path):
         val_loss = 0
         with torch.no_grad():
             for inputs, targets in val_loader:
-                outputs = model(inputs)
-                loss = criterion(outputs, targets)
+                inputs_cuda = inputs.to(device)
+                targets_cuda = targets.to(device)
+                outputs = model(inputs_cuda, use_activation=False)
+                loss = criterion(outputs, targets_cuda)
                 val_loss += loss.item()
 
         val_loss /= len(val_loader)
@@ -102,8 +120,10 @@ if __name__ == "__main__":
     output_folder = Path(__file__).parent.parent.parent / "outs" / Path(__file__).parent.name  
     output_folder.mkdir(exist_ok=True, parents=True)
 
-    train_model(output_folder)
-    
+    device = get_device("auto") # choices are "auto", "cpu", "cuda"
+    print(f"Using device: {device}")
+    train_model(output_folder, device=device)
+
     # Set the seed for reproducibility
     torch.manual_seed(42)
     
