@@ -22,7 +22,7 @@
             "name": "exercise_01.dataset",
             "type": "debugpy",
             "request": "launch",
-            "module": "src.exercise_04.dataset",
+            "module": "src.exercise_01.dataset",
             "console": "integratedTerminal"
         },
         {
