@@ -60,17 +60,17 @@ If you are installing it on linux. Use the[./Makefile](./Makefile) instead to cr
 3) Install python package manager UV:
       #### Linux:
         Execute: 
-
-            ```bash
-              curl -LsSf https://astral.sh/uv/install.sh | sh
-            ```
+        
+      ```bash
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+      ```
 
       #### Windows:
         1) Execute: 
 
-            ```bash
-              powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-            ```
+      ```bash
+        powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+      ```
 
 
 ### CONFIGURE WINDOWS POLICIES
@@ -140,9 +140,9 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ## Create environment
 1) Open your project in VS Code
 2) Open a new Terminal
-    - Execute script create_env.ps1
+    - Execute uv to install environment
         ```bash
-        make install
+        uv sync
         ```
     - Assure that the environment is activated:
         - Linux:
