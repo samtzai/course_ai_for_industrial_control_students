@@ -154,11 +154,11 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         .\.venv\bin\activate
         ```
   
-  <!-- In windows, If you have permisions issues to run the command execute bypassing the execution permits:
+  In windows, If you have permisions issues to run the command execute bypassing the execution permits:
       
     ```bash
     Powershell -ExecutionPolicy Bypass -File ".\scripts\create_env.ps1"
-    ``` -->
+    ```
   When VSCODE detect that you are creating a new environment, say yes
 
 ## Run/Debug a Jupyter-Notebook in VSCODE
@@ -188,6 +188,5 @@ git commit -m "commit message"
 git push
 ``` -->
  
-
 
 
