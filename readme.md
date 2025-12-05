@@ -156,9 +156,15 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
   
   In windows, If you have permisions issues to run the command execute bypassing the execution permits:
       
-    ```bash
+  ```bash
     Powershell -ExecutionPolicy Bypass -File ".\scripts\create_env.ps1"
-    ```
+  ```
+  Or allow script running the following command in a administrative rights powershell: 
+  ```bash
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+  ```
+
+  
   When VSCODE detect that you are creating a new environment, say yes
 
 ## Run/Debug a Jupyter-Notebook in VSCODE
