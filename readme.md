@@ -71,24 +71,27 @@ If you are installing it on linux. Use the[./Makefile](./Makefile) instead to cr
       ```bash
         powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
       ```
-
+        2) Restart the terminal or execute: 
+      ```bash
+      $env:Path += ";$env:USERPROFILE\.local\bin"
+      ```
 
 ### CONFIGURE WINDOWS POLICIES
 
 In windows, if large directories are not allowed, change script policy in Powershell with admin rights:
 
 1) Open PowerShell with Administrative privileges (**Abrir como administrador**)
-2) Execute the following command:
+2) Execute the following command to allow long paths:
 ```bash
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" ` -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
-<!-- 3) Execute the following commnand to allow script execution (**Abrir como administrador**)
+3) Execute the following commnand in administrative rights powershell to allow script execution (**Abrir como administrador**)
 
 Note: In windows, if script running rights are not allowed, change script policy in Powershell with admin rights for your user. 
 
 ```bash
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-``` -->
+```
 ## Configure your development stack:
 1) Open VSCode
 2) Install the following extensions on the extensions tab in VS Code    
@@ -97,7 +100,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         <!-- - WSL -->
         <!-- - Remote Explorer -->
         - Python
-        - Excel Viewer
+        <!-- - Excel Viewer -->
         - Git Graph
         - Rainbow CSV
         <!-- - Ruff -->
@@ -139,7 +142,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 ## Create environment
 1) Open your project in VS Code
-2) Open a new Terminal
+2) Open a new Terminal in vscode (tools->terminal-> new)
     - Execute uv to install environment
         ```bash
         uv sync
@@ -154,7 +157,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         .\.venv\bin\activate
         ```
   
-  In windows, If you have permisions issues to run the command execute bypassing the execution permits:
+  <!-- In windows, If you have permisions issues to run the command execute bypassing the execution permits:
       
   ```bash
     Powershell -ExecutionPolicy Bypass -File ".\scripts\create_env.ps1"
@@ -162,7 +165,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
   Or allow script running the following command in a administrative rights powershell: 
   ```bash
     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-  ```
+  ``` -->
 
   
   When VSCODE detect that you are creating a new environment, say yes
