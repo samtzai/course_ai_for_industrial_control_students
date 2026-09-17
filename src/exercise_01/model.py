@@ -8,11 +8,10 @@ class SimplePerceptron(nn.Module):
         self.fc = nn.Linear(input_dim, output_dim)
         self.activation = nn.Identity()
 
-    def forward(self, x, use_activation=True):
-        x = self.fc(x)
-        if use_activation:
-            x = self.activation(x)
-        return x
+    def forward(self, x):
+        z1 = self.fc(x)
+        y_hat = self.activation(z1)
+        return y_hat
 
 
 if __name__ == "__main__":

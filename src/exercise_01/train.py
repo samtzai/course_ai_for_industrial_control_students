@@ -25,15 +25,9 @@ def get_device(force: str = "auto") -> torch.device:
 
 def train_model(output_folder: Path, device: torch.device):
     # Create an instance of the dataset
-    dataset = NoisyRegressionDataset(size=10000)
-
-    # Split the dataset into train, validation, and test sets
-    train_size = int(0.7 * len(dataset))
-    val_size = int(0.15 * len(dataset))
-    test_size = len(dataset) - train_size - val_size
-    train_dataset, val_dataset, test_dataset = random_split(
-        dataset, [train_size, val_size, test_size]
-    )
+    train_dataset = NoisyRegressionDataset(size=10000)
+    val_dataset = NoisyRegressionDataset(size=2000)
+    test_dataset = NoisyRegressionDataset(size=2000)
 
     # Create DataLoaders for the datasets
     pin_memory = True if device.type == "cuda" else False
@@ -60,10 +54,10 @@ def train_model(output_folder: Path, device: torch.device):
         train_loss = 0
         for inputs, targets in train_loader:
             # Forward pass
-            inputs_cuda = inputs.to(device)
-            targets_cuda = targets.to(device)
-            outputs = model(inputs_cuda, use_activation=False)
-            loss = criterion(outputs, targets_cuda)
+            mis_x = inputs.to(device)
+            mis_y = targets.to(device)
+            mis_ygorrito = model(mis_x)
+            loss = criterion(mis_ygorrito, mis_y)
 
 
 
@@ -82,10 +76,10 @@ def train_model(output_folder: Path, device: torch.device):
         val_loss = 0
         with torch.no_grad():
             for inputs, targets in val_loader:
-                inputs_cuda = inputs.to(device)
-                targets_cuda = targets.to(device)
-                outputs = model(inputs_cuda, use_activation=False)
-                loss = criterion(outputs, targets_cuda)
+                mis_x = inputs.to(device)
+                mis_y = targets.to(device)
+                mis_ygorrito = model(mis_x)
+                loss = criterion(mis_ygorrito, mis_y)
                 val_loss += loss.item()
 
         val_loss /= len(val_loader)
@@ -119,12 +113,13 @@ if __name__ == "__main__":
     # Create output folder based on file folder
     output_folder = Path(__file__).parent.parent.parent / "outs" / Path(__file__).parent.name  
     output_folder.mkdir(exist_ok=True, parents=True)
+    # Set the seed for reproducibility
+    torch.manual_seed(42)
 
     device = get_device("auto") # choices are "auto", "cpu", "cuda"
     print(f"Using device: {device}")
     train_model(output_folder, device=device)
 
-    # Set the seed for reproducibility
-    torch.manual_seed(42)
+
     
     

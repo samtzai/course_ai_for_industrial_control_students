@@ -98,15 +98,9 @@ if __name__ == "__main__":
     # Set the seed for reproducibility
     torch.manual_seed(42)
     # Create an instance of the dataset
-    dataset = NoisyRegressionDataset(size=10000)
-
-    # Split the dataset into train, validation, and test sets
-    train_size = int(0.7 * len(dataset))
-    val_size = int(0.15 * len(dataset))
-    test_size = len(dataset) - train_size - val_size
-    train_dataset, val_dataset, test_dataset = random_split(
-        dataset, [train_size, val_size, test_size]
-    )
+    train_dataset = NoisyRegressionDataset(size=10000)
+    val_dataset = NoisyRegressionDataset(size=2000)
+    test_dataset = NoisyRegressionDataset(size=2000)
 
     # Create DataLoaders for the datasets
     train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True)
