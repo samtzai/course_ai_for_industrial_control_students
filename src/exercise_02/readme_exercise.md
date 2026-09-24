@@ -1,9 +1,15 @@
 
-# Exercise 1: Learn a linear function with PyTorch
+# Exercise 2: Learn a not linear function with PyTorch
 
 ## Objective
 
-Estimation of a unknown function by a machine learning model
+Estimation of a unknown function by a machine learning model. The function is on dataset.py
+You have to create a model that is able to recreate that function in dataset.py.
+The function is -3 * x * x + 5 * .x 
+To this end copy the train, evaluate and model python function from exercise 1 and modify them to get the function.
+
+Use format of exercise_01 to fill this md file
+
 
 ## Task Formalization
 
