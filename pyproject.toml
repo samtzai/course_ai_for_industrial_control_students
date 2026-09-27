@@ -33,6 +33,7 @@ dependencies = [
     "stringzilla<=4.0.0",
     "plotly>=6.3.1",
     "nbstripout>=0.9.1",
+    "kagglehub>=1.0.2",
 ]
 
 
