@@ -1,16 +1,16 @@
 
-# Exercise 1: Create a Deep Learning Model for defibrillation detection from ECG in PyTorch 
+# Exercise 7: Create a Deep Learning Model for defibrillation detection from ECG in PyTorch 
 ## Objective
 
-Develop a model that can classify deffibrillation from ECG
+Develop a model that can classify defibrillation from ECG
 
 First, please, unzip the file data/ecg/cut_pub_4sec.zip and add it to git LFS:
 git lfs track data/ecg/**
 
-Try to create a model that can classify deffibrillation from ECG but using LSTM or GRU and their combinations with CNNs.
+Try to create a model that can classify defibrillation from ECG but using LSTM or GRU and their combinations with CNNs.
 
 
-Which are the conclussions?
+What are the conclusions?
 
 ## Task Formalization
 
@@ -127,12 +127,12 @@ How this model will generalize to new data?
 
 Describe the process you have followed to improve the model and the evolution of performance of the model during the process.
 
-You can include a table stating the chanched parameters and the obtained results after the process.
+You can include a table stating the changed parameters and the obtained results after the process.
 
 
 ## Questions
 
-Pleaser answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_03` folder.
+Please answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_07` folder.
 
 ### Which are the differences you found between previous model and this one?
 

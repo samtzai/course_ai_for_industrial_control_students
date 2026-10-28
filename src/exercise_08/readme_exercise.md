@@ -1,12 +1,12 @@
 
-# Exercise 1: Create a Deep autoencoder in PyTorch with CIFAR-10 dataset
+# Exercise 8: Create a Deep autoencoder in PyTorch with CIFAR-10 dataset
 
 ## Objective
 
-Develop a deep autoencoder model that can classify compress and decompress images from CIFAR-10 dataset
+Develop a deep autoencoder model that can compress and decompress images from CIFAR-10 dataset
 
 1) Create a encoder decoder architecture. For the encoder part, use same architecture than exercise_05
-2) Setset the autoencoder loss
+2) Set the autoencoder loss
 2) Use the encoder and decoder to train and evaluate a model to compress and decompress images
 3) Create an evaluate.py file that evaluates the model and calculates and stores the evaluation metrics (which are the ones that are needed?)
 4) Use the encoder of the autoencoder to train and evaluate a model to classify in CIFAR-10 dataset
@@ -126,12 +126,12 @@ How this model will generalize to new data?
 
 Describe the process you have followed to improve the model and the evolution of performance of the model during the process.
 
-You can include a table stating the chanched parameters and the obtained results after the process.
+You can include a table stating the changed parameters and the obtained results after the process.
 
 
 ## Questions
 
-Pleaser answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_03` folder.
+Please answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_08` folder.
 
 ### Which are the differences you found between previous model and this one?
 

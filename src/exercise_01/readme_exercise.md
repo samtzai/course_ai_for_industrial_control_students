@@ -9,7 +9,7 @@ The objective of this exercise is to model an unknown function by a machine lear
 
 ## Task Formalization
 
-The task in hand can be formalized in two steps. First, we will define what we are tring to achieve as clearlly as possible. Second, we will define the approach we are taking to solve it.
+The task in hand can be formalized in two steps. First, we will define what we are trying to achieve as clearly as possible. Second, we will define the approach we are taking to solve it.
 
 
 ### What we are trying to do (Inference)
@@ -19,7 +19,7 @@ $$
 y = f(x)
 $$
 
-We are trying to create a model of $f$ using a Machine Learning method to infer the $W$ weight matrix that better expreses the relationship between $x$-$y$ pair of data. Mathematically expressed:
+We are trying to create a model of $f$ using a Machine Learning method to infer the $W$ weight matrix that better expresses the relationship between $x$-$y$ pair of data. Mathematically expressed:
 
 $$
 y = f(W,x)

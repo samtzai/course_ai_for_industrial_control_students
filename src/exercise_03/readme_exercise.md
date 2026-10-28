@@ -1,9 +1,9 @@
 
-# Exercise 1: Learn a Complex function with PyTorch
+# Exercise 3: Learn a Complex function with PyTorch
 
 ## Objective
 
-Estimation of a unknown function by a machine learning model. The function is on dataset.py
+Estimation of an unknown function by a machine learning model. The function is on dataset.py
 You have to create a model that is able to recreate that function in dataset.py.
 The function is  100 * sin(8 * pi * x / 100) + 2
 To this end copy the train, evaluate and model python function from exercise 1 and modify them to get the function.
@@ -125,12 +125,12 @@ How this model will generalize to new data?
 
 Describe the process you have followed to improve the model and the evolution of performance of the model during the process.
 
-You can include a table stating the chanched parameters and the obtained results after the process.
+You can include a table stating the changed parameters and the obtained results after the process.
 
 
 ## Questions
 
-Pleaser answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_03` folder.
+Please answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_03` folder.
 
 ### Which are the differences you found between previous model and this one?
 

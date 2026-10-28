@@ -8,8 +8,8 @@ Developed by [Artzai Picon](https://github.com/samtzai)
 
 This course repository contains comprehensive materials organized into two different sections:
 
-- **Notebooks**: They are meant to help the student to understand the concepts tought during the classes. They are based on python notebooks.
-- **src**: As python notebooks are not suitable for professional coding. in this section, we include modular python code to help the students learn appropiate python coding.
+- **Notebooks**: They are meant to help the student to understand the concepts taught during the classes. They are based on python notebooks.
+- **src**: As python notebooks are not suitable for professional coding, in this section, we include modular python code to help the students learn appropriate python coding.
 
 ### 📚 **Notebooks** (`notebooks/`)
 - **Environment Setup** (`00_python_basics/`): Python basics and introduction
@@ -85,7 +85,7 @@ In windows, if large directories are not allowed, change script policy in Powers
 ```bash
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" ` -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
-3) Execute the following commnand in administrative rights powershell to allow script execution (**Abrir como administrador**)
+3) Execute the following command in administrative rights powershell to allow script execution (**Abrir como administrador**)
 
 Note: In windows, if script running rights are not allowed, change script policy in Powershell with admin rights for your user. 
 
@@ -157,7 +157,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         .\.venv\bin\activate
         ```
   
-  <!-- In windows, If you have permisions issues to run the command execute bypassing the execution permits:
+  <!-- In windows, If you have permissions issues to run the command execute bypassing the execution permits:
       
   ```bash
     Powershell -ExecutionPolicy Bypass -File ".\scripts\create_env.ps1"

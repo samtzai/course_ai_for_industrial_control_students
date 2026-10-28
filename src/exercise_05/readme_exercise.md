@@ -1,5 +1,5 @@
 
-# Exercise 1: Create a Deep Learning Model for image classification in PyTorch with CIFAR-10 dataset
+# Exercise 5: Create a Deep Learning Model for image classification in PyTorch with CIFAR-10 dataset
 
 ## Objective
 
@@ -8,7 +8,7 @@ Develop a model that can classify images from CIFAR-10 dataset
 First try a model only with fully connected layers
 Create an evaluate.py file that evaluates the model and calculates and stores the evaluation metrics including a confusion matrix
 
-Which are the conclussions?
+What are the conclusions?
 
 ## Task Formalization
 
@@ -125,12 +125,12 @@ How this model will generalize to new data?
 
 Describe the process you have followed to improve the model and the evolution of performance of the model during the process.
 
-You can include a table stating the chanched parameters and the obtained results after the process.
+You can include a table stating the changed parameters and the obtained results after the process.
 
 
 ## Questions
 
-Pleaser answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_03` folder.
+Please answer the following questions. Include graphs if necessary. Store the graphs in the `outs/exercise_05` folder.
 
 ### Which are the differences you found between previous model and this one?
 
