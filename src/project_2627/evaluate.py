@@ -54,18 +54,23 @@ def evaluate_model(
             targets.extend(labels.tolist())
 
     class_names = test_dataset.class_names
+    class_labels = list(range(len(class_names)))
     report = classification_report(
         targets,
         predictions,
-        labels=list(range(len(class_names))),
+        labels=class_labels,
         target_names=class_names,
         output_dict=True,
         zero_division=0,
     )
     metrics = {
         "accuracy": accuracy_score(targets, predictions),
-        "macro_f1": f1_score(targets, predictions, average="macro", zero_division=0),
-        "weighted_f1": f1_score(targets, predictions, average="weighted", zero_division=0),
+        "macro_f1": f1_score(
+            targets, predictions, labels=class_labels, average="macro", zero_division=0
+        ),
+        "weighted_f1": f1_score(
+            targets, predictions, labels=class_labels, average="weighted", zero_division=0
+        ),
     }
     output_folder.mkdir(parents=True, exist_ok=True)
     with (output_folder / "test_metrics.json").open("w", encoding="utf-8") as file:
@@ -104,7 +109,7 @@ def evaluate_model(
     figure.savefig(output_folder / "per_class_metrics.png", dpi=160)
     plt.close(figure)
 
-    matrix = confusion_matrix(targets, predictions, labels=list(range(len(class_names))))
+    matrix = confusion_matrix(targets, predictions, labels=class_labels)
     figure, axis = plt.subplots(figsize=(16, 14))
     display = ConfusionMatrixDisplay(confusion_matrix=matrix, display_labels=class_names)
     display.plot(ax=axis, xticks_rotation="vertical", colorbar=False, values_format="d")

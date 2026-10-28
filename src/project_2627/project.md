@@ -16,6 +16,8 @@ The script stores the images under `data/project_2627/hieroglyphs-dataset/`. The
 
 Images are grouped into folders named after their class. The shared loader retains classes with at least 15 images; smaller classes are excluded so each retained class can contribute examples to all three partitions. The retained data is split deterministically and stratified by class into 70% training, 15% validation, and 15% test data (with integer rounding per class). The default seed is 42. The class-to-index mapping is sorted and shared across the splits. Images are converted to grayscale and resized to 64 by 64 pixels by default.
 
+Evaluation uses this same retained class list for the classification report, per-class metric plot, F1 scores, and confusion matrix. Classes below the image threshold are absent from the test split and are not included in these evaluation outputs.
+
 Inspect the labels and sample images with:
 
 ```python
