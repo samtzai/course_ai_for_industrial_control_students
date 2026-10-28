@@ -169,3 +169,9 @@ cython_debug/
 # Custom Files
 # outs/
 # *.mat
+outs/project_2627/confusion_matrix.png
+outs/project_2627/dataset_examples.png
+outs/project_2627/loss_plot.png
+outs/project_2627/per_class_metrics.png
+outs/project_2627/test_classification_report.csv
+outs/project_2627/test_metrics.json
