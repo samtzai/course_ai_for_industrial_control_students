@@ -1,14 +1,14 @@
 # Exercise 2: Learn a non-linear function with PyTorch
 
-- **Grupo:** ________________________________
-- **Nombres:** ________________________________
-- **Uso de IA: no / sí, para…** ________________________________
+- **Group:** ________________________________
+- **Names:** ________________________________
+- **AI use: no / yes, for...** ________________________________
 
-Criterio de corrección:se valora sobre todo que entendáis los conceptos y los expliquéis con vuestras palabras y vuestros resultados.
+Grading criterion: the main focus is on understanding the concepts and explaining them in your own words using your own results.
 
-Entrega este informe en formato `.md`, no PDF, dentro de un zip que incluya `src/` y `outs/`. Guarda las salidas de este ejercicio en `outs/exercise_02/`.
+Submit this report in `.md` format, not PDF, in a zip containing `src/` and `outs/`. Save the outputs for this exercise in `outs/exercise_02/`.
 
-El alumnado implementa `model.py`, `train.py` y `evaluate.py`; cuando se proporcionen ejemplos, debe adaptarlos a la tarea.
+Students implement `model.py`, `train.py`, and `evaluate.py`; when examples are provided, they must adapt them to the task.
 
 ## Objective
 

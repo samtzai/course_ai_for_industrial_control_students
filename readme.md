@@ -43,7 +43,7 @@ This course repository contains comprehensive materials organized into two diffe
 - `Makefile`: Build and automation scripts
 - `general_installation.md`: Platform-specific installation guides
 
-## Ejecutar en Google Colab
+## Run in Google Colab
 
 | Notebook | Colab |
 |---|---|
@@ -65,7 +65,7 @@ This course repository contains comprehensive materials organized into two diffe
 | Grid robot Q-learning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/07_reinforcement_learning/n15_grid_robot_qlearning_tutorial_training_process.ipynb) |
 | Lunar Lander reinforcement learning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/07_reinforcement_learning/n16_lunar_lander_reinforcement_learning.ipynb) |
 
-Los quiz (`.md`) se rellenan y entregan igual que en local.
+Complete and submit the quizzes (`.md`) as you would when working locally.
 
 ## Installation:
 Follow this section if you are installing the development tools in your own computer. 
@@ -105,12 +105,12 @@ If you are installing it on linux. Use the[./Makefile](./Makefile) instead to cr
 
 In windows, if large directories are not allowed, change script policy in Powershell with admin rights:
 
-1) Open PowerShell with Administrative privileges (**Abrir como administrador**)
+1) Open PowerShell with Administrative privileges (**Run as administrator**)
 2) Execute the following command to allow long paths:
 ```bash
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" ` -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
-3) Execute the following command in administrative rights powershell to allow script execution (**Abrir como administrador**)
+3) Execute the following command in administrative rights powershell to allow script execution (**Run as administrator**)
 
 Note: In windows, if script running rights are not allowed, change script policy in Powershell with admin rights for your user. 
 
