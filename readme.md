@@ -76,34 +76,43 @@ Follow this section if you are installing the development tools in your own comp
 This process has been already done at the University lab. 
 In that case, go to the "Open the repository in VS Code" section.
 
-If you are installing it on linux. Use the[./Makefile](./Makefile) instead to create the environment.
+On Linux, you can use the [Makefile](./Makefile) to create the environment.
 
 ### INSTALL APPLICATIONS
 <!-- 1) Install python3 from the Microsoft Store (python 3.13) -->
-1) Install VSCode from the Microsoft Store
-2) Install control version software Git:
-    - Git: 
-    ```bash
-    https://git-scm.com/downloads/win
-    ```
-3) Install python package manager UV:
-      #### Linux:
-        Execute: 
-        
-      ```bash
-        curl -LsSf https://astral.sh/uv/install.sh | sh
-      ```
+#### macOS
+1) Install [Visual Studio Code for macOS](https://code.visualstudio.com/download).
+2) Install Git by opening Terminal and running:
+   ```bash
+   xcode-select --install
+   ```
+   Follow the prompt to install the Xcode Command Line Tools; this provides Git.
+3) Install the `uv` Python package manager in Terminal:
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+   Close and reopen Terminal so `uv` is available on your `PATH`.
+4) Install a compatible Python version:
+   ```bash
+   uv python install 3.11
+   ```
 
-      #### Windows:
-        1) Execute: 
+#### Linux
+Install `uv` from Terminal:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
-      ```bash
-        powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-      ```
-        2) Restart the terminal or execute: 
-      ```bash
-      $env:Path += ";$env:USERPROFILE\.local\bin"
-      ```
+#### Windows
+1) Install Visual Studio Code and Git for Windows.
+2) Install `uv` in PowerShell:
+   ```powershell
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+   ```
+   Restart the terminal, or add `uv` to the current session's path:
+   ```powershell
+   $env:Path += ";$env:USERPROFILE\.local\bin"
+   ```
 
 ### CONFIGURE WINDOWS POLICIES
 
