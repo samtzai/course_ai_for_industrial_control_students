@@ -18,10 +18,12 @@ This course repository contains comprehensive materials organized into two diffe
   - Complex function fitting exercises
 - **Predictive Maintenance** (`02_predictive_maintenance/`):
   - Supervised classification techniques
+  - [AI4I 2020 machine failure classification](./notebooks/02_predictive_maintenance/01_supervised_classification/n03b_ai4i_failure_classification.ipynb): class imbalance, ROC/PR curves and cost-based thresholds ([quiz](./notebooks/02_predictive_maintenance/01_supervised_classification/n03b_ai4i_failure_classification_quiz.md))
   - Unsupervised anomaly detection
   - Overfitting prevention strategies
   - Feature selection methods
   - Complete supervised classification application
+  - [NASA C-MAPSS remaining useful life prediction](./notebooks/02_predictive_maintenance/06_remaining_useful_life/n18_cmapss_rul_prediction.ipynb): feature-based MLP, 1D-CNN and LSTM models ([quiz](./notebooks/02_predictive_maintenance/06_remaining_useful_life/n18_cmapss_rul_prediction_quiz.md))
 - **Steel Defects Classification** (`03_steel_defects_classification/`):
   - Binary and multiclass classification demos using CIFAR-10
   - Data augmentation techniques with quizzes
@@ -51,6 +53,7 @@ This course repository contains comprehensive materials organized into two diffe
 | Linear model training | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/01_introduction/n01_linear_model_training.ipynb) |
 | Complex function fitting | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/01_introduction/n02_complex_function_fitting.ipynb) |
 | Classification tutorial | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/01_supervised_classification/n03_classification_tutorial.ipynb) |
+| AI4I machine failure classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/01_supervised_classification/n03b_ai4i_failure_classification.ipynb) |
 | K-means clustering | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/02_unsupervised_anomaly/n04_kmeans_clustering_tutorial.ipynb) |
 | Simple 2D anomaly detection | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/02_unsupervised_anomaly/n05_simple_2d_anomaly_detection.ipynb) |
 | Anomaly detection | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/02_unsupervised_anomaly/n06_anomaly_detection_tutorial.ipynb) |
@@ -59,6 +62,7 @@ This course repository contains comprehensive materials organized into two diffe
 | PCA demonstration | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/04_feature_selection/n09_pca_demonstration.ipynb) |
 | Wine quality classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/05_supervised_classification_app/n10_wine_quality_clf.ipynb) |
 | Wine quality regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/05_supervised_classification_app/n11_wine_quality_reg.ipynb) |
+| C-MAPSS remaining useful life prediction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/06_remaining_useful_life/n18_cmapss_rul_prediction.ipynb) |
 | CIFAR-10 binary classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n12_steel_defect_cifar10_demo_binary.ipynb) |
 | CIFAR-10 multiclass classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n13_steel_defect_cifar10_demo_multiclass.ipynb) |
 | CIFAR-10 data augmentation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n14_steel_defect_cifar10_demo_multiclass_augmentation.ipynb) |
