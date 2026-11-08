@@ -28,7 +28,7 @@ _______________________________________________________________________________
 
 _______________________________________________________________________________
 
-**Question 2**: The target is clipped at `RUL_CAP = 125`. Explain with the plot of the target why this is reasonable. What would the model have to learn if we did not clip it?
+**Question 2**: The training and validation targets are clipped at `RUL_CAP = 125`, while test metrics use the original RUL values. Explain with the target plot why clipping can be reasonable for training. What changes when evaluating against the un-clipped test RUL?
 
 _Your answer:_
 
@@ -44,7 +44,7 @@ _______________________________________________________________________________
 
 _______________________________________________________________________________
 
-**Question 4**: Which sensors were dropped in your run and why? Look at the sensor plot: describe the trend of two of the sensors you kept when the engine approaches failure.
+**Question 4**: Which sensors were dropped in your run based on the training engines only, and why? Look at the sensor plot: describe the trend of two of the sensors you kept when the engine approaches failure.
 
 _Your answer:_
 
@@ -92,15 +92,15 @@ _______________________________________________________________________________
 
 ## Section 3: Your Results and the Asymmetric Metric
 
-**Question 9**: Copy the results table of **your** run:
+**Question 9**: Copy the final results table of **your** run, keeping validation and test metrics clearly separate. Validation targets are clipped; test metrics use the original, un-clipped RUL:
 
-| Model | Test RMSE | Test NASA score | Late predictions (%) | Training time (s) |
-|---|---|---|---|---|
-| Hand-crafted + MLP | | | | |
-| 1D-CNN | | | | |
-| LSTM | | | | |
+| Model | Val RMSE | Val NASA score | Test RMSE (raw RUL) | Test NASA score (raw RUL) | Training time (s) |
+|---|---:|---:|---:|---:|---:|
+| Hand-crafted + MLP | | | | | |
+| 1D-CNN | | | | | |
+| LSTM | | | | | |
 
-Which model is best according to RMSE? And according to the NASA score? If they disagree, explain why.
+Which model was selected using validation NASA score (with validation RMSE as tie-breaker)? Compare its validation and test results. Explain why test results must not be used to select a model.
 
 _Your answer:_
 
@@ -124,7 +124,7 @@ _______________________________________________________________________________
 
 _______________________________________________________________________________
 
-**Question 12**: In the "safety margin" section, which margin was chosen on validation in your run and how did RMSE and NASA score change on test? Why can a worse RMSE be acceptable?
+**Question 12**: In the "safety margin" section, which margin was chosen using validation in your run? Report the final test RMSE and NASA score before and after applying it, against the original test RUL. Why can a worse RMSE be acceptable?
 
 _Your answer:_
 

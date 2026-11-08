@@ -177,13 +177,13 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         uv sync
         ```
     - Assure that the environment is activated:
-        - Linux:
+        - Linux/macOS:
         ```bash
-        .\.venv\Scripts\activate
+        source .venv/bin/activate
         ```
-        - Windows:
+        - Windows (PowerShell):
         ```bash
-        .\.venv\bin\activate
+        .\.venv\Scripts\Activate.ps1
         ```
   
   <!-- In windows, If you have permissions issues to run the command execute bypassing the execution permits:

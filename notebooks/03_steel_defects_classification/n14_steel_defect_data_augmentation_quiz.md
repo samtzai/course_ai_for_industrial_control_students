@@ -1,212 +1,164 @@
-# Steel Defect Classification - Comprehensive Evaluation Questionnaire
+# Steel Defect Classification - Evaluation Questionnaire
 
 - **Grupo:** ________________________________
 - **Nombres:** ________________________________
 - **Uso de IA: no / sí, para…** ________________________________
 
-Criterio de corrección:se valora sobre todo que entendáis los conceptos y los expliquéis con vuestras palabras y vuestros resultados.
+Criterio de corrección: se valora sobre todo que entendáis los conceptos y los expliquéis con vuestras palabras y vuestros resultados.
 
-Entrega el cuestionario en formato `.md`, no PDF.
+Entrega el cuestionario en formato `.md`, no PDF. Cuando una pregunta pida cifras, copia las de vuestra ejecución e indica cualquier cambio de parámetros.
 
 ## Student Information
 - **Date**: ________________________________
 - **Course**: Applications of AI for Industrial Control
-- **Tutorial**: Steel Defect Classification with Data Augmentation
+- **Tutorial**: Steel defect classification with CIFAR-10 examples and data augmentation
 
-## 📋 Instructions
-
-This quiz covers concepts from all three steel defect classification notebooks:
-- **Notebook 12**: Binary Classification (Defective vs Non-defective)
-- **Notebook 13**: Multiclass Classification (Multiple defect types)  
-- **Notebook 14**: Data Augmentation and Performance Comparison
-
-**Time**: Approximately 30-45 minutes  
+## Instructions
+Run notebooks 12, 13 and 14. They use CIFAR-10 as a proxy for steel defects, not real steel images. Use your own results for questions about performance; results can differ with the split, seed, training settings and runtime.
 
 ---
 
-## Section 1: Binary Classification Fundamentals
+## Section 1: Dataset and Binary Classification
 
-### 1.1 Classification Basics
+**Question 1**: Which two CIFAR-10 classes does notebook 12 use to simulate defective and non-defective steel? Why is this only a proxy task?
 
-**Question 1**: In the binary classification notebook, which CIFAR-10 classes were used to simulate steel defect detection?
+_Your answer:_
 
-A) Classes 0 (airplane) as defective and 1 (automobile) as non-defective  
-B) Classes 5 (dog) as defective and 9 (truck) as non-defective  
-C) All 10 classes were used equally  
-D) Classes 2 (bird) and 8 (ship) only  
+_______________________________________________________________________________
 
-**Question 2**: What loss function was used in the binary classification model and why?
+**Question 2**: What is the shape and meaning of one image tensor after preprocessing? Explain the roles of the channel, height and width dimensions.
 
-A) CrossEntropyLoss because it works best for all classification problems  
-B) BCELoss (Binary Cross Entropy) because it's specifically designed for binary classification  
-C) MSELoss because it measures the distance between predictions and labels  
-D) HingeLoss because it's used in SVMs  
+_Your answer:_
 
-**Question 3**: What is the key difference in the output layer between binary and multiclass classification models?
+_______________________________________________________________________________
 
-A) Binary uses 1 output neuron with sigmoid, multiclass uses multiple neurons with softmax  
-B) Binary uses multiple outputs, multiclass uses one output  
-C) Both use the same architecture  
-D) Binary uses ReLU activation, multiclass uses sigmoid  
+**Question 3**: Which output activation and loss function are used for binary classification? Explain why they fit the target labels.
 
-### 1.2 Data Preprocessing
+_Your answer:_
 
-**Question 4**: In the binary classification notebook, how was the CIFAR-10 data converted for the binary task?
+_______________________________________________________________________________
 
-A) All images were converted to grayscale  
-B) Only specific classes were selected and labels were converted to 0 (non-defective) and 1 (defective)  
-C) Images were resized to 64x64 pixels  
-D) Data was normalized to [-1, 1] range only  
+**Question 4**: Report the binary model's validation and test metrics from your run. Which errors would be most important to investigate in an industrial inspection line, and why?
 
-**Question 5**: Generally, how does multiclass classification performance compare to binary classification?
+| Metric | Validation | Test |
+|---|---:|---:|
+| Accuracy | | |
+| Precision / recall (as reported) | | |
 
-A) Multiclass always performs better due to more detailed categories  
-B) Binary typically achieves higher accuracy as it's a simpler decision boundary  
-C) Performance is always identical  
-D) Multiclass is faster to train
+_Your explanation:_
+
+_______________________________________________________________________________
 
 ---
 
 ## Section 2: Multiclass Classification
 
-### 2.1 Architecture and Loss Functions
+**Question 5**: What does each row and column represent in the confusion matrix? What do the diagonal and off-diagonal cells tell you?
 
-**Question 6**: How many different steel defect types were simulated in the multiclass classification notebook?
+_Your answer:_
 
-A) 2 types (defective/non-defective)  
-B) 5 types of defects  
-C) 10 types including various defects and good steel  
-D) 8 types excluding good steel  
-
-**Question 7**: What loss function is used for multiclass classification and what does it include internally?
-
-A) BCELoss with manual softmax implementation  
-B) CrossEntropyLoss which includes softmax internally  
-C) MSELoss for measuring classification errors  
-D) Multiple BCELoss functions, one for each class  
-
-**Question 8**: In multiclass classification, what does the confusion matrix diagonal represent?
-
-A) Misclassified samples  
-B) Correctly classified samples for each class  
-C) Total number of samples per class  
-D) The model's confidence scores  
-
-### 2.2 Performance Analysis
-
-**Question 9**: Compare binary and multiclass classification performance for the steel defect task. Explain which typically achieves higher accuracy and why:
-
-_Your analysis:_
 _______________________________________________________________________________
+
+**Question 6**: Notebook 13 maps the CIFAR-10 classes to simulated defect categories. Copy the per-class results or confusion matrix from your run. Which class was easiest and which was most difficult to classify? Support your answer with the relevant values.
+
+_Your answer:_
+
+_______________________________________________________________________________
+
+**Question 7**: Report the validation and test accuracy for your binary and multiclass runs. Explain, using your own results and the number and nature of the classes, why the figures differ in your experiment. Do not assume one task must always have higher accuracy.
+
+| Task | Validation accuracy | Test accuracy |
+|---|---:|---:|
+| Binary | | |
+| Multiclass | | |
+
+_Your explanation:_
+
+_______________________________________________________________________________
+
+**Question 8**: If one defect category is much rarer than the others, why can accuracy be misleading? Name a metric or training strategy that could help.
+
+_Your answer:_
+
 _______________________________________________________________________________
 
 ---
 
-## Section 3: Data Augmentation Fundamentals
+## Section 3: Data Augmentation and Results
 
-### 3.1 Augmentation Concepts
+**Question 9**: What is data augmentation, and how can it help a vision model generalise to new images?
 
-**Question 10**: What is the primary purpose of data augmentation in industrial vision systems?
+_Your answer:_
 
-A) To reduce the computational cost of training neural networks  
-B) To artificially expand the dataset size and improve model generalization  
-C) To compress images for faster processing  
-D) To convert RGB images to grayscale  
+_______________________________________________________________________________
 
-**Question 11**: In the augmentation comparison study, what metric was used to measure overfitting?
+**Question 10**: Which augmentations did notebook 14 apply? For each, describe a plausible change in image appearance it is intended to represent.
 
-A) The validation accuracy alone  
-B) The training time duration  
-C) The gap between training and validation accuracy  
-D) The total number of parameters in the model  
+_Your answer:_
 
-**Question 12**: Which augmentation techniques would be MOST appropriate for steel defect classification?
+_______________________________________________________________________________
 
-A) Extreme rotation (±90 degrees) and color inversion  
-B) Random rotation (±15°), brightness/contrast adjustment, and horizontal flip  
-C) Converting all images to black and white  
-D) Random noise addition and image blurring only  
+**Question 11**: Report validation accuracy, test accuracy and training time with and without augmentation from your run. Which differences do you observe?
 
-### 3.2 Training Performance
+| Run | Validation accuracy | Test accuracy | Training time |
+|---|---:|---:|---:|
+| Without augmentation | | | |
+| With augmentation | | | |
 
-**Question 13**: Compare the training times in your run with and without augmentation. Report the difference and discuss factors that might affect it.
+**Question 12**: Which of your runs achieved the highest test accuracy, and by how much did the results differ? Explain in your own words why that happened in your experiment. Consider the data split, training variability and whether the transformations preserve defect cues; do not generalise beyond your results.
 
-**Question 14**: Compare your validation accuracy, test accuracy and train-validation gap with and without augmentation. What changed in your run?
+_Your explanation:_
 
-## ⚙️ PART 4: IMPLEMENTATION AND PRACTICAL APPLICATIONS
+_______________________________________________________________________________
 
-### Question 15: PyTorch Implementation Best Practice
+**Question 13**: Compare the training and validation curves in both runs. What evidence, if any, do you see of overfitting, and how did augmentation change it?
 
-**In PyTorch, what is the correct way to apply augmentation only during training and not during validation/testing?**
+_Your answer:_
 
-A) Apply the same transforms to all datasets  
-B) Use different transform pipelines: augmented transforms for training, basic transforms for validation/testing  
-C) Apply augmentation after training is complete  
-D) Use augmentation only on the test set  
+_______________________________________________________________________________
+
+**Question 14**: Which augmentation would you remove or adjust if moving from CIFAR-10 examples to real steel images? Explain how it might distort a feature that matters for classifying defects.
+
+_Your answer:_
+
+_______________________________________________________________________________
 
 ---
 
-### Question 16: Industrial Real-World Simulation
+## Section 4: Implementation and Industrial Applications
 
-**For a steel manufacturing line with high-speed cameras, which augmentation technique would simulate real-world conditions?**
+**Question 15**: In PyTorch, how should transforms differ between training and validation/testing? Why should random augmentation not be applied to the test set?
 
-A) Random color inversion  
-B) Motion blur and slight perspective transforms  
-C) Extreme scaling (10x zoom)  
-D) Image rotation by 180 degrees  
+_Your answer:_
 
----
+_______________________________________________________________________________
 
-### Question 17: Model Architecture Considerations
+**Question 16**: What information does dropout provide during training, and why can it complement data augmentation?
 
-**Why was dropout used in addition to data augmentation in the notebooks?**
+_Your answer:_
 
-A) To replace data augmentation entirely  
-B) To provide additional regularization and prevent overfitting  
-C) To speed up training  
-D) To reduce the number of parameters  
+_______________________________________________________________________________
 
----
+**Question 17**: For a high-speed steel manufacturing line, which image changes might occur in production? Propose an augmentation that could represent one of them without erasing defect information.
 
-## Section 4: Implementation and Practical Applications
+_Your answer:_
 
-### 4.1 PyTorch Implementation
+_______________________________________________________________________________
 
-**Question 18**: In PyTorch, what is the correct way to apply augmentation only during training and not during validation/testing?
+**Question 18**: Describe one limitation of evaluating these models on CIFAR-10 proxy images before deployment at a real plant or camera station. How would you test or mitigate it?
 
-A) Apply the same transforms to all datasets  
-B) Use different transform pipelines: augmented transforms for training, basic transforms for validation/testing  
-C) Apply augmentation after training is complete  
-D) Use augmentation only on the test set  
+_Your answer:_
 
-**Question 19**: When implementing data augmentation for actual steel defect detection, which consideration is MOST critical?
+_______________________________________________________________________________
 
-A) Using as many augmentation techniques as possible  
-B) Ensuring augmentations don't alter critical defect characteristics  
-C) Applying the same augmentation to all industrial domains  
-D) Using only geometric transformations  
+**Question 19**: Based on your experiments, what should be the next step before deploying a defect classifier? Refer to a result, failure mode or limitation from your own run.
 
-**Question 20**: Why was dropout used in addition to data augmentation in the notebooks?
+_Your answer:_
 
-A) To replace data augmentation entirely  
-B) To provide additional regularization and prevent overfitting  
-C) To speed up training  
-D) To reduce the number of parameters  
+_______________________________________________________________________________
 
-### 4.2 Real-World Applications
+**Question 20**: If you could run one additional experiment, what would you change and which metric or plot would you use to decide whether it helped?
 
-**Question 21**: In the multiclass notebook, what challenge would real steel defect datasets likely face?
+_Your answer:_
 
-A) All defect types occur with equal frequency  
-B) Class imbalance - some defects are much rarer than others  
-C) Too many samples for each defect type  
-D) Perfect data quality with no labeling errors  
-
-**Question 22**: Based on all three notebooks, what would be the recommended progression for implementing a real steel defect classification system?
-
-A) Start with multiclass, then add augmentation, finally simplify to binary  
-B) Start with binary classification, extend to multiclass, then evaluate augmentation
-C) Use only augmentation without considering classification type  
-D) Implement all approaches simultaneously without testing  
-
----
+_______________________________________________________________________________
