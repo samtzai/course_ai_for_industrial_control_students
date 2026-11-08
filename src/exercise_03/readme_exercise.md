@@ -1,5 +1,14 @@
-
 # Exercise 3: Learn a Complex function with PyTorch
+
+- **Grupo:** ________________________________
+- **Nombres:** ________________________________
+- **Uso de IA: no / sí, para…** ________________________________
+
+Criterio de corrección:se valora sobre todo que entendáis los conceptos y los expliquéis con vuestras palabras y vuestros resultados.
+
+Entrega este informe en formato `.md`, no PDF, dentro de un zip que incluya `src/` y `outs/`. Guarda las salidas de este ejercicio en `outs/exercise_03/`.
+
+El alumnado implementa `model.py`, `train.py` y `evaluate.py`; cuando se proporcionen ejemplos, debe adaptarlos a la tarea.
 
 ## Objective
 

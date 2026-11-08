@@ -33,6 +33,7 @@ This course repository contains comprehensive materials organized into two diffe
 ### 🛠️ **Source Code** (`src/`)
 - Modular exercises (`exercise_01/` through `exercise_09/`)
 - Reusable utility functions and classes
+- Exercise outputs go in `outs/exercise_XX/` (not `out/`). Submit each exercise as a zip containing `src/` and `outs/`, with the report in Markdown (`.md`, not PDF).
 
 ### 💾 **Data** (`data/`)
 - ECG datasets for biomedical signal processing
@@ -197,5 +198,4 @@ git commit -m "commit message"
 git push
 ``` -->
  
-
 
