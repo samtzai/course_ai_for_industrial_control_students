@@ -7,8 +7,9 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
 
-from .dataset import NoisyRegressionDataset
+from .dataset import TEST_SEED, TRAIN_SEED, VALIDATION_SEED, NoisyRegressionDataset
 from .model import SimplePerceptron
+
 
 def get_device(force: str = "auto") -> torch.device:
     """Return a torch.device based on the `force` option.
@@ -25,9 +26,9 @@ def get_device(force: str = "auto") -> torch.device:
 
 def train_model(output_folder: Path, device: torch.device):
     # Create an instance of the dataset
-    train_dataset = NoisyRegressionDataset(size=10000)
-    val_dataset = NoisyRegressionDataset(size=2000)
-    test_dataset = NoisyRegressionDataset(size=2000)
+    train_dataset = NoisyRegressionDataset(size=10000, seed=TRAIN_SEED)
+    val_dataset = NoisyRegressionDataset(size=2000, seed=VALIDATION_SEED)
+    test_dataset = NoisyRegressionDataset(size=2000, seed=TEST_SEED)
 
     # Create DataLoaders for the datasets
     pin_memory = True if device.type == "cuda" else False

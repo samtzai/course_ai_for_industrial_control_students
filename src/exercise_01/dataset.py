@@ -7,6 +7,10 @@ import seaborn as sns
 import torch
 from torch.utils.data import Dataset
 
+TRAIN_SEED = 41
+VALIDATION_SEED = 42
+TEST_SEED = 123
+
 
 class NoisyRegressionDataset(Dataset):
     def __init__(self, noise_std=20, size=100, seed=42):

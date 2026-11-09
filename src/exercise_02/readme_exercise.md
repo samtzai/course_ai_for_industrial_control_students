@@ -10,6 +10,10 @@ Submit this report in `.md` format, not PDF, in a zip containing `src/` and `out
 
 Students implement `model.py`, `train.py`, and `evaluate.py`; when examples are provided, they must adapt them to the task.
 
+The synthetic dataset defaults to seed 42. When creating training, validation
+and test sets, use distinct seeds (for example 41, 42 and 123) and use the same
+seeds again in evaluation so the splits are reproducible and independent.
+
 ## Objective
 
 Estimation of an unknown function by a machine learning model. The function is on dataset.py
@@ -145,7 +149,6 @@ Please answer the following questions. Include graphs if necessary. Store the gr
 ### Which are the differences you found between previous model and this one?
 
 ### Does the model generalizes well to new data?
-
 
 
 

@@ -13,8 +13,11 @@ Students implement `model.py`, `train.py`, and `evaluate.py`; when examples are 
 
 Develop a model that can classify defibrillation from ECG
 
-First, please, unzip the file data/ecg/cut_pub_4sec.zip and add it to git LFS:
-git lfs track data/ecg/**
+The dataset loader automatically joins the two tracked `data/ecg/cut_pub_4sec.zip.001`
+and `.002` fragments and extracts `data/ecg/cut_pub_4sec.mat` on first use.
+From the repository root, you can also prepare it explicitly with
+`python -m src.utils.prepare_ecg_data`. Existing `.mat` files are left untouched.
+In Colab, clone the repository first and run the same command from its root.
 
 First try a first model only with fully connected layers 
 Then try a second model with convolutional layers 
@@ -125,7 +128,6 @@ Please answer the following questions. Include graphs if necessary. Store the gr
 ### Which are the differences you found between previous model and this one?
 
 ### Does the model generalizes well to new data?
-
 
 
 

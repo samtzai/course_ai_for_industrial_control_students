@@ -169,6 +169,7 @@ cython_debug/
 # Custom Files
 # outs/
 # *.mat
+data/ecg/cut_pub_4sec.mat
 outs/project_2627/confusion_matrix.png
 outs/project_2627/dataset_examples.png
 outs/project_2627/loss_plot.png

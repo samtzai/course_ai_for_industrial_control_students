@@ -4,7 +4,7 @@
 - **Nombres:** ________________________________
 - **Uso de IA: no / sí, para…** ________________________________
 
-Criterio de corrección:: se valora sobre todo que entendáis los conceptos y los expliquéis con vuestras palabras y vuestros resultados.
+Criterio de corrección: se valora sobre todo que entendáis los conceptos y los expliquéis con vuestras palabras y vuestros resultados.
 
 Entrega el cuestionario en formato `.md`, no PDF. Cuando una pregunta pida cifras, cópialas de **vuestra** ejecución (y, si habéis cambiado algún parámetro, indicad cuál).
 

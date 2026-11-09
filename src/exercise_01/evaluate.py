@@ -7,7 +7,7 @@ import seaborn as sns
 import torch
 from torch.utils.data import DataLoader, random_split
 
-from .dataset import NoisyRegressionDataset
+from .dataset import TEST_SEED, TRAIN_SEED, VALIDATION_SEED, NoisyRegressionDataset
 from .model import SimplePerceptron
 
 
@@ -98,9 +98,9 @@ if __name__ == "__main__":
     # Set the seed for reproducibility
     torch.manual_seed(42)
     # Create an instance of the dataset
-    train_dataset = NoisyRegressionDataset(size=10000)
-    val_dataset = NoisyRegressionDataset(size=2000)
-    test_dataset = NoisyRegressionDataset(size=2000)
+    train_dataset = NoisyRegressionDataset(size=10000, seed=TRAIN_SEED)
+    val_dataset = NoisyRegressionDataset(size=2000, seed=VALIDATION_SEED)
+    test_dataset = NoisyRegressionDataset(size=2000, seed=TEST_SEED)
 
     # Create DataLoaders for the datasets
     train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True)

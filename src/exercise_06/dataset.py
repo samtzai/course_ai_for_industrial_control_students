@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -6,6 +7,11 @@ import scipy
 import torch
 from torch.utils.data import Dataset
 
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from src.utils.prepare_ecg_data import prepare_ecg_data
+
 
 class ECGDataset(Dataset):
     def __init__(
@@ -13,6 +19,8 @@ class ECGDataset(Dataset):
         ecg_file="./data/ecg/cut_pub_4sec.mat",
         train=True,
     ):
+        if not Path(ecg_file).is_file() and Path(ecg_file).name == "cut_pub_4sec.mat":
+            prepare_ecg_data(ecg_file)
         self.data = self._import_data(ecg_file)
         train_test_subset = numpy.array(self.data["train"])
         X = numpy.array(self.data["s_ecg"])

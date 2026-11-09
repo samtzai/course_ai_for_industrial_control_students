@@ -10,6 +10,10 @@ Submit this report in `.md` format, not PDF, in a zip containing `src/` and `out
 
 Students implement `model.py`, `train.py`, and `evaluate.py`; when examples are provided, they must adapt them to the task.
 
+The example scripts generate reproducible, separate training, validation and test
+samples with seeds 41, 42 and 123, respectively. Their shared constants are in
+`dataset.py`; use the same seeds when evaluating a trained model.
+
 ## Objective
 
 The objective of this exercise is to model an unknown function by a machine learning method.
@@ -191,7 +195,6 @@ Example for test set:
 ### What happens if you change the learning rate?
 
 ### Please, reduce the data points of the dataset to 10 and create 2 layers / 20 neurons each. In this case, how can you reduce the overfitting problem?
-
 
 
 

@@ -25,8 +25,8 @@ This course repository contains comprehensive materials organized into two diffe
   - Complete supervised classification application
   - [NASA C-MAPSS remaining useful life prediction](./notebooks/02_predictive_maintenance/06_remaining_useful_life/n18_cmapss_rul_prediction.ipynb): feature-based MLP, 1D-CNN and LSTM models ([quiz](./notebooks/02_predictive_maintenance/06_remaining_useful_life/n18_cmapss_rul_prediction_quiz.md))
 - **Steel Defects Classification** (`03_steel_defects_classification/`):
-  - Binary and multiclass classification demos using CIFAR-10
-  - Data augmentation techniques with quizzes
+  - P6 (I): binary and multiclass classification and data augmentation with the NEU surface defect dataset ([quiz](./notebooks/03_steel_defects_classification/n14_steel_defect_data_augmentation_quiz.md))
+  - P6 (II): [ResNet18 transfer learning and fine-tuning](./notebooks/03_steel_defects_classification/n17_steel_defect_neu_finetuning_resnet18.ipynb) ([quiz](./notebooks/03_steel_defects_classification/n17_steel_defect_neu_finetuning_quiz.md))
 - **Reinforcement Learning** (`07_reinforcement_learning/`):
   - Q-learning tutorial with grid robot
   - Lunar lander reinforcement learning implementation
@@ -39,6 +39,7 @@ This course repository contains comprehensive materials organized into two diffe
 
 ### 💾 **Data** (`data/`)
 - ECG datasets for biomedical signal processing
+- Exercises 6 and 7 automatically join the two ECG zip fragments and extract `data/ecg/cut_pub_4sec.mat` on first use. Alternatively, run `python -m src.utils.prepare_ecg_data` from the repository root. In Colab, clone the repository first, change to its root with `%cd`, and run `!python -m src.utils.prepare_ecg_data`. Existing extracted data is reused; allow disk space for the archive and extracted file.
 
 ### 📋 **Configuration Files**
 - `pyproject.toml`: Python project configuration
@@ -60,12 +61,13 @@ This course repository contains comprehensive materials organized into two diffe
 | Overfitting and underfitting | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/03_overfitting/n08_overfitting_underfitting_demo_sin.ipynb) |
 | PCA in 2D | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/04_feature_selection/n09_pca_2d_demonstration.ipynb) |
 | PCA demonstration | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/04_feature_selection/n09_pca_demonstration.ipynb) |
-| Wine quality classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/05_supervised_classification_app/n10_wine_quality_clf.ipynb) |
-| Wine quality regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/05_supervised_classification_app/n11_wine_quality_reg.ipynb) |
+| Synthetic wine quality classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/05_supervised_classification_app/n10_wine_quality_clf.ipynb) |
+| Synthetic wine quality regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/05_supervised_classification_app/n11_wine_quality_reg.ipynb) |
 | C-MAPSS remaining useful life prediction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/02_predictive_maintenance/06_remaining_useful_life/n18_cmapss_rul_prediction.ipynb) |
-| CIFAR-10 binary classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n12_steel_defect_cifar10_demo_binary.ipynb) |
-| CIFAR-10 multiclass classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n13_steel_defect_cifar10_demo_multiclass.ipynb) |
-| CIFAR-10 data augmentation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n14_steel_defect_cifar10_demo_multiclass_augmentation.ipynb) |
+| NEU binary classification (P6 I) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n12_steel_defect_neu_binary.ipynb) |
+| NEU multiclass classification (P6 I) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n13_steel_defect_neu_multiclass.ipynb) |
+| NEU data augmentation (P6 I) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n14_steel_defect_neu_multiclass_augmentation.ipynb) |
+| NEU ResNet18 fine-tuning (P6 II) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/03_steel_defects_classification/n17_steel_defect_neu_finetuning_resnet18.ipynb) |
 | Grid robot Q-learning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/07_reinforcement_learning/n15_grid_robot_qlearning_tutorial_training_process.ipynb) |
 | Lunar Lander reinforcement learning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samtzai/course_ai_for_industrial_control_students/blob/main/notebooks/07_reinforcement_learning/n16_lunar_lander_reinforcement_learning.ipynb) |
 
