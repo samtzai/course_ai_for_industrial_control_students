@@ -180,6 +180,8 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
     - Write "Open in Folder"
     - Select the folder where you cloned the repository
 
+
+sdgsdfgsfg
 ## Create environment
 1) Open your project in VS Code
 2) Open a new Terminal in vscode (tools->terminal-> new)
