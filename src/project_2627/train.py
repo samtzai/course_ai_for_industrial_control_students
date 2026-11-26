@@ -119,7 +119,7 @@ def train_model(
 def main():
     parser = argparse.ArgumentParser(description="Train the hieroglyph classifier")
     parser.add_argument("--root-dir", type=Path, default=DATASET_ROOT)
-    parser.add_argument("--epochs", type=int, default=10)
+    parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--learning-rate", type=float, default=0.001)
     parser.add_argument("--seed", type=int, default=42)

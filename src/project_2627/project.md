@@ -74,3 +74,10 @@ Outputs, including the best checkpoint, loss curve, test metrics, per-class metr
   - Limitations, computational or data constraints, and proposed next steps.
 
 Show the development path in chronological order: baseline, diagnosis, experiments, and final choice. Include plots or a compact experiment comparison table and enough configuration detail for another student to understand and reproduce your conclusions. Clearly distinguish validation results used during development from the final test results.
+
+
+## Pruebas
+
+### Primera:
+
+- En la primera prueba aumento las epochs
