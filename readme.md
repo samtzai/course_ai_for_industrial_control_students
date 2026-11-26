@@ -148,19 +148,24 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
         - Markdown Preview Mermaid Support
         <!-- - Remote SSH -->
         <!-- - Material Icon Theme -->
-<!-- 3) Configure git
+3) Configure git
     - In VSCode, open new terminal (menu, terminal, new)
-    - Run the following commands: 
+    - Run the following commands:
         Configure name and email in git
         ```bash
         git config --global user.name "Your Name"
         git config --global user.email "Your Email"
         ```
-        set merge instead of rebase
+        Set merge (instead of rebase) as the default strategy for `git pull`
+        ```bash
+        git config --global pull.rebase false
+        git config --global pull.ff false
+        ```
+    - Alternatively, run the `git-config` target from the [Makefile](./Makefile) (Linux/macOS) or [make.bat](./make.bat) (Windows):
         ```bash
         git config --global merge.rebase false
         ```
-    - Close the terminal -->
+    - Close the terminal
 
 ## Open the repository in VS Code
 1) Open VS Code
